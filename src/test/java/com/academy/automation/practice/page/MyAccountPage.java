@@ -13,6 +13,9 @@ public class MyAccountPage extends BasePage {
     @FindBy(css="#header > div.nav > div > div > nav > div:nth-child(2) > a")
     private WebElement logoutLink;
 
+    @FindBy(css="#header > div.nav > div > div > nav > div:nth-child(1) > a > span")
+    private WebElement userNameLink;
+
     public MyAccountPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -26,4 +29,9 @@ public class MyAccountPage extends BasePage {
         logoutLink.click();
         return new HomePage(driver);
     }
+
+    public String getUserNameCapture() {
+        return userNameLink.getText().trim();
+    }
+
 }
