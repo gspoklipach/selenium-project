@@ -20,7 +20,7 @@ public class LoginTests extends BaseTest {
         LOG.info("Input password {}", "123qwerty");
 
         MyAccountPage myAccountPage =
-                (MyAccountPage)new HomePage(driver)
+                (MyAccountPage)new HomePage(manager.getDriver())
                         .clickSignInLink()
                         .inputLogin("oleg.kh81@gmail.com")
                         .inputPassword("123qwerty")
