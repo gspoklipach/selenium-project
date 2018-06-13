@@ -1,5 +1,6 @@
 package com.academy.automation.practice.manager;
 
+import com.academy.automation.practice.manager.helper.NavigationHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,9 +12,11 @@ import java.util.concurrent.TimeUnit;
 
 public class TestManager {
     private static int DEFAULT_WAIT = 30;
-    protected WebDriver driver;
-    protected String baseUrl;
-    protected Properties prop;
+    protected final Properties prop = new Properties();
+    private String baseUrl;
+
+    private WebDriver driver;
+    private NavigationHelper navigationHelper;
 
     public WebDriver getDriver() {
         return driver;
@@ -21,7 +24,6 @@ public class TestManager {
 
     public void init(String browser) throws IOException {
         String path = System.getProperty("cfg");
-        prop = new Properties();
         prop.load(new FileInputStream(path));
         baseUrl = prop.getProperty("url");
 
@@ -39,6 +41,12 @@ public class TestManager {
 
         driver.manage().timeouts().implicitlyWait(DEFAULT_WAIT, TimeUnit.SECONDS);
         //        driver.manage().window().maximize();
+
+        navigationHelper = new NavigationHelper(driver, baseUrl);
+    }
+
+    public NavigationHelper getNavigationHelper() {
+        return navigationHelper;
     }
 
     public void stop() {

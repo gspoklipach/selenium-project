@@ -9,11 +9,11 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends BaseTest {
 
-    @Ignore
+
     @Test(groups = "login")
     public void testLoginPage() throws Exception {
         // TODO
-        driver.get(baseUrl + "/index.php");
+        manager.getNavigationHelper().toHome();
         LOG.info("Start test of login");
 
         LOG.info("Input login {}", "oleg.kh81@gmail.com");
@@ -31,7 +31,7 @@ public class LoginTests extends BaseTest {
         myAccountPage.logout();
         LOG.info("Finish test of login");
     }
-
+    @Ignore
     @Test(groups = {"login", "provider"}, dataProvider = "loginIncorrectData")
     public void testIncorrectLogin(String login, String password, String expectedMessage) {
         //driver.get(baseUrl + "/index.php");

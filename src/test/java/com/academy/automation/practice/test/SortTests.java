@@ -9,8 +9,8 @@ public class SortTests extends BaseTest {
 
     @Test
     public void testSortDress() throws InterruptedException {
-        driver.get(baseUrl);
-        DressPage dressPage = new HomePage(driver)
+        manager.getNavigationHelper().toHome();
+        DressPage dressPage = new HomePage(manager.getDriver())
                 .clickDressLink()
                 .selectByText("Price: Lowest first");
 

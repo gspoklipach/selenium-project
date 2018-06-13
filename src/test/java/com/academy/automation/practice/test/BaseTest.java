@@ -14,13 +14,8 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class BaseTest {
-    protected static final int DEFAULT_WAIT = 30;
     protected static final Logger LOG = LogManager.getLogger(BaseTest.class);
     protected final TestManager manager = new TestManager();
-
-    protected WebDriver driver;
-    protected String baseUrl;
-    protected Properties prop;
 
     @Parameters("browser")
     @BeforeClass(alwaysRun = true)
