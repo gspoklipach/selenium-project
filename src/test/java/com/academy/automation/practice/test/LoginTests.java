@@ -1,6 +1,7 @@
 package com.academy.automation.practice.test;
 
 import com.academy.automation.practice.page.HomePage;
+import com.academy.automation.practice.page.LoginPage;
 import com.academy.automation.practice.page.MyAccountPage;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -9,10 +10,9 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends BaseTest {
 
-
+    @Ignore
     @Test(groups = "login")
     public void testLoginPage() throws Exception {
-        // TODO
         manager.goTo().home();
         LOG.info("Start test of login");
 
@@ -31,35 +31,36 @@ public class LoginTests extends BaseTest {
         myAccountPage.logout();
         LOG.info("Finish test of login");
     }
-    @Ignore
+
     @Test(groups = {"login", "provider"}, dataProvider = "loginIncorrectData")
     public void testIncorrectLogin(String login, String password, String expectedMessage) {
-        //driver.get(baseUrl + "/index.php");
         LOG.info("Start test of login");
 
         LOG.info("Input login {}", login);
         LOG.info("Input password {}", password);
         LOG.info("expectedMessage {}", expectedMessage);
 
-//        LoginPage loginPage =
-//                (LoginPage) new HomePage(driver)
-//                        .clickSignInLink()
-//                        .inputLogin(login)
-//                        .inputPassword(password)
-//                        .clickSignIn(false);
-//
-//        String errorMessage = loginPage.getErrorMessage();
-//        Assert.assertEquals(errorMessage, expectedMessage);
+        manager.goTo().home();
+        LoginPage loginPage =
+                (LoginPage) new HomePage(manager.getDriver())
+                        .clickSignInLink()
+                        .inputLogin(login)
+                        .inputPassword(password)
+                        .clickSignIn(false);
+
+        String errorMessage = loginPage.getErrorMessage();
+        Assert.assertEquals(errorMessage, expectedMessage);
 
         LOG.info("Finish test of login");
     }
 
+    // TODO read from excel
     @DataProvider(name="loginIncorrectData")
     public Object[][] provideLoginIncorrectData() {
         return new Object[][] {
                 {"oleg.kh81@gmail.com", "123", "Invalid password."},
                 {"123", "123qwerty", "Invalid email address."},
-                {"oleg.kh81@gmail.com", "123", "An email address required."},
+                {"", "123", "An email address required."},
         };
     }
 }
