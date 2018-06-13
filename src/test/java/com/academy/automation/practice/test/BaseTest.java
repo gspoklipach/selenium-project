@@ -1,18 +1,15 @@
-package com.academy.test.automation.practice.test;
+package com.academy.automation.practice.test;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 import java.io.FileInputStream;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     protected static final int DEFAULT_WAIT = 30;

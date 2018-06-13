@@ -1,4 +1,4 @@
-package com.academy.test.automation.practice.test;
+package com.academy.db.mobile.test;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;

@@ -1,4 +1,4 @@
-package com.academy.test.automation.practice.page;
+package com.academy.automation.practice.page;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

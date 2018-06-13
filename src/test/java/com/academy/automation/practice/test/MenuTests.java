@@ -1,7 +1,7 @@
-package com.academy.test.automation.practice.test;
+package com.academy.automation.practice.test;
 
-import com.academy.test.automation.practice.page.HomePage;
-import com.academy.test.automation.practice.page.WomenPage;
+import com.academy.automation.practice.page.HomePage;
+import com.academy.automation.practice.page.WomenPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

@@ -1,10 +1,7 @@
-package com.academy.test.automation.practice.test;
+package com.academy.automation.practice.test;
 
-import com.academy.test.automation.practice.page.HomePage;
-import com.academy.test.automation.practice.page.LoginPage;
-import com.academy.test.automation.practice.page.MyAccountPage;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import com.academy.automation.practice.page.HomePage;
+import com.academy.automation.practice.page.MyAccountPage;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Ignore;

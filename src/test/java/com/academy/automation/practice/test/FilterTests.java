@@ -1,6 +1,5 @@
-package com.academy.test.automation.practice.test;
+package com.academy.automation.practice.test;
 
-import com.academy.test.automation.practice.test.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
