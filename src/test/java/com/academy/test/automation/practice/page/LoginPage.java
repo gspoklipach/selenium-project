@@ -1,0 +1,52 @@
+package com.academy.test.automation.practice.page;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginPage extends BasePage {
+
+    @FindBy(id="email")
+    private WebElement loginField;
+
+    @FindBy(id="passwd")
+    private WebElement passwordField;
+
+    @FindBy(id="SubmitLogin")
+    private WebElement signInLink;
+
+    @FindBy(css="#center_column > div.alert.alert-danger > ol > li")
+    private WebElement authMessageBlock;
+
+    public LoginPage(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver, this);
+    }
+
+    public LoginPage inputLogin(String login) {
+//        loginField.clear();
+//        loginField.sendKeys(login);
+        inputTextField(loginField, login);
+        return this;
+    }
+
+    public LoginPage inputPassword(String password) {
+//        passwordField.clear();
+//        passwordField.sendKeys(password);
+        inputTextField(passwordField, password);
+        return this;
+    }
+
+    public BasePage clickSignIn(boolean success) {
+        signInLink.click();
+        if (success)
+            return new MyAccountPage(driver);
+        else
+            return this;
+    }
+
+    public String getErrorMessage() {
+        return authMessageBlock.getText().trim();
+    }
+}
