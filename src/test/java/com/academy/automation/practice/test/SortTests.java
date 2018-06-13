@@ -9,7 +9,7 @@ public class SortTests extends BaseTest {
 
     @Test
     public void testSortDress() throws InterruptedException {
-        manager.getNavigationHelper().toHome();
+        manager.goTo().home();
         DressPage dressPage = new HomePage(manager.getDriver())
                 .clickDressLink()
                 .selectByText("Price: Lowest first");

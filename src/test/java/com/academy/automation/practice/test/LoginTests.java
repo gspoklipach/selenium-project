@@ -13,7 +13,7 @@ public class LoginTests extends BaseTest {
     @Test(groups = "login")
     public void testLoginPage() throws Exception {
         // TODO
-        manager.getNavigationHelper().toHome();
+        manager.goTo().home();
         LOG.info("Start test of login");
 
         LOG.info("Input login {}", "oleg.kh81@gmail.com");

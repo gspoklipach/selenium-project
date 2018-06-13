@@ -12,7 +12,7 @@ public class NavigationHelper {
         this.baseUrl = baseUrl;
     }
 
-    public void toHome() {
+    public void home() {
         driver.get(baseUrl);
     }
 }

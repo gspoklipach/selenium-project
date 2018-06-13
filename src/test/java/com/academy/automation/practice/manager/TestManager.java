@@ -45,7 +45,7 @@ public class TestManager {
         navigationHelper = new NavigationHelper(driver, baseUrl);
     }
 
-    public NavigationHelper getNavigationHelper() {
+    public NavigationHelper goTo() {
         return navigationHelper;
     }
 

@@ -12,7 +12,7 @@ public class MenuTests extends BaseTest {
 
         // 1 ШАГ - перейти на страницу
         // TODO
-        manager.getNavigationHelper().toHome();
+        manager.goTo().home();
 
         // 2 ШАГ - клик по меню "Women"
         HomePage homePage = new HomePage(manager.getDriver());
