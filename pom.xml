@@ -82,7 +82,7 @@
                         </property>
                     </properties>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng-kdt.xml</suiteXmlFile>
+                        <suiteXmlFile>suits/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
