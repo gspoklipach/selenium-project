@@ -3,10 +3,7 @@ package com.academy.automation.practice.bdd;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 @CucumberOptions(
         features = {"src/main/resources/features"},
@@ -21,7 +18,7 @@ public class LoginTests {
 
     private TestNGCucumberRunner testNGCucumberRunner;
 
-    @BeforeClass
+    @BeforeSuite
     public void setUpClass() {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
@@ -36,7 +33,7 @@ public class LoginTests {
         return testNGCucumberRunner.provideFeatures();
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterSuite(alwaysRun = true)
     public void tearDownClass() throws Exception {
         testNGCucumberRunner.finish();
     }
