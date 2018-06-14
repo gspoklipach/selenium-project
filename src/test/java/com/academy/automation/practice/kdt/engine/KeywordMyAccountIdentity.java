@@ -1,4 +1,4 @@
-package com.academy.automation.practice.engine;
+package com.academy.automation.practice.kdt.engine;
 
 import com.academy.automation.practice.page.MyAccountPage;
 import org.openqa.selenium.WebDriver;

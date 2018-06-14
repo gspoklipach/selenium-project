@@ -1,4 +1,4 @@
-package com.academy.automation.practice.engine;
+package com.academy.automation.practice.kdt.engine;
 
 public class KeywordStep {
     private String page;
