@@ -10,7 +10,6 @@ public class DressPage extends  BasePage{
     @FindBy(id="selectProductSort")
     private WebElement sortBySelect;
 
-//    @FindBy(css="#center_column > ul > li.ajax_block_product.first-in-line.first-item-of-tablet-line.first-item-of-mobile-line > div > div > div.right-block > div > div.content_price > span")
     @FindBy(css="#center_column > ul > li.ajax_block_product.col-xs-12.col-sm-6.col-md-4.first-in-line.first-item-of-tablet-line.first-item-of-mobile-line > div > div.right-block > div.content_price > span.price.product-price")
     private WebElement firstPrice;
 

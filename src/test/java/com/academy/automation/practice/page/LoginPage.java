@@ -25,15 +25,11 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage inputLogin(String login) {
-//        loginField.clear();
-//        loginField.sendKeys(login);
         inputTextField(loginField, login);
         return this;
     }
 
     public LoginPage inputPassword(String password) {
-//        passwordField.clear();
-//        passwordField.sendKeys(password);
         inputTextField(passwordField, password);
         return this;
     }
