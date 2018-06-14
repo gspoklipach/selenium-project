@@ -65,7 +65,7 @@
                         </property>
                     </properties>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng-kdt.xml</suiteXmlFile>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

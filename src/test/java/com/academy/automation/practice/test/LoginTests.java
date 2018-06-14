@@ -34,12 +34,6 @@ public class LoginTests extends BaseTest {
 
     @Test(groups = {"login", "provider"}, dataProvider = "loginIncorrectData")
     public void testIncorrectLogin(String login, String password, String expectedMessage) {
-        LOG.info("Start test of login");
-
-        LOG.info("Input login {}", login);
-        LOG.info("Input password {}", password);
-        LOG.info("expectedMessage {}", expectedMessage);
-
         manager.goTo().home();
         LoginPage loginPage =
                 (LoginPage) new HomePage(manager.getDriver())
@@ -50,8 +44,6 @@ public class LoginTests extends BaseTest {
 
         String errorMessage = loginPage.getErrorMessage();
         Assert.assertEquals(errorMessage, expectedMessage);
-
-        LOG.info("Finish test of login");
     }
 
     // TODO read from excel
