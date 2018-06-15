@@ -1,8 +1,5 @@
 package com.academy.automation.practice.test;
 
-import com.academy.automation.practice.page.HomePage;
-import com.academy.automation.practice.page.LoginPage;
-import com.academy.automation.practice.page.MyAccountPage;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Ignore;
@@ -10,41 +7,31 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends BaseTest {
 
-    @Ignore
-    @Test(groups = "login")
-    public void testLoginPage() throws Exception {
+    @Test(groups = "login", dataProvider = "userName")
+    public void testSuceessLogin(String userNameExpected) throws Exception {
         manager.goTo().home();
-        LOG.info("Start test of login");
+        manager.session().login();
 
-        LOG.info("Input login {}", "oleg.kh81@gmail.com");
-        LOG.info("Input password {}", "123qwerty");
-
-        MyAccountPage myAccountPage =
-                (MyAccountPage)new HomePage(manager.getDriver())
-                        .clickSignInLink()
-                        .inputLogin("oleg.kh81@gmail.com")
-                        .inputPassword("123qwerty")
-                        .clickSignIn(true);
-
-        String loginCapture = myAccountPage.getLoginCapture();
-        Assert.assertEquals(loginCapture, "Oleg Afanasiev");
-        myAccountPage.logout();
-        LOG.info("Finish test of login");
+        String userNameActual = manager.account().getUserName();
+        Assert.assertEquals(userNameActual, userNameExpected);
+        manager.session().logout();
     }
 
     @Test(groups = {"login", "provider"}, dataProvider = "loginIncorrectData")
     public void testIncorrectLogin(String login, String password, String expectedMessage) {
         manager.goTo().home();
-        LoginPage loginPage =
-                (LoginPage) new HomePage(manager.getDriver())
-                        .clickSignInLink()
-                        .inputLogin(login)
-                        .inputPassword(password)
-                        .clickSignIn(false);
-
-        String errorMessage = loginPage.getErrorMessage();
-        Assert.assertEquals(errorMessage, expectedMessage);
+        manager.session().tryLogin(login, password);
+        String actualMsg = manager.session().getErrMessage();
+        Assert.assertEquals(actualMsg, expectedMessage);
     }
+
+    @DataProvider(name="userName")
+    public Object[][] provideLoginCorrect() {
+        return new Object[][] {
+                {"Oleg Afanasiev"}
+        };
+    }
+
 
     // TODO read from excel
     @DataProvider(name="loginIncorrectData")

@@ -1,6 +1,8 @@
 package com.academy.automation.practice.manager;
 
+import com.academy.automation.practice.manager.helper.AccountHelper;
 import com.academy.automation.practice.manager.helper.NavigationHelper;
+import com.academy.automation.practice.manager.helper.SessionHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,6 +19,8 @@ public class TestManager {
 
     private WebDriver driver;
     private NavigationHelper navigationHelper;
+    private SessionHelper sessionHelper;
+    private AccountHelper accountHelper;
 
     public WebDriver getDriver() {
         return driver;
@@ -43,10 +47,20 @@ public class TestManager {
         //        driver.manage().window().maximize();
 
         navigationHelper = new NavigationHelper(driver, baseUrl);
+        sessionHelper = new SessionHelper(driver, prop.getProperty("login"), prop.getProperty("password"));
+        accountHelper = new AccountHelper(driver);
     }
 
     public NavigationHelper goTo() {
         return navigationHelper;
+    }
+
+    public SessionHelper session() {
+        return sessionHelper;
+    }
+
+    public AccountHelper account() {
+        return accountHelper;
     }
 
     public void stop() {

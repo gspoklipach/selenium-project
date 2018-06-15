@@ -25,7 +25,7 @@ public class MyAccountPage extends BasePage {
         return userLink.getText().trim();
     }
 
-    public HomePage logout() {
+    public HomePage clickLogout() {
         logoutLink.click();
         return new HomePage(driver);
     }
