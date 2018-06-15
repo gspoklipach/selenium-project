@@ -35,7 +35,7 @@ public class StepDefinitions {
                 .clickSignInLink();
     }
 
-    @When("^I fill login '(.*?)'$")
+    @When("^I fill loger '(.*?)'$")
     public void fillLogin(String login) {
         // Write code here that turns the phrase above into concrete actions
         new LoginPage(manager.getDriver())
@@ -63,11 +63,11 @@ public class StepDefinitions {
                 userName);
     }
 
-    @Then("^I should make logout$")
+    @Then("^I should make clickLogout$")
     public void i_should_see_the_button() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         new MyAccountPage(manager.getDriver())
-                .logout();
+                .clickLogout();
     }
 
     @Given("^Я нахожусь на домашней странице$")

@@ -24,15 +24,15 @@ public class LoginTests extends BaseTest {
     }
 
     @Test(groups={"kdt"}, dataProvider = "kdtProvider")
-    public void testIncorrectLogin(List<KeywordStep> steps) {
-        LOG.info("start 'testIncorrectLogin'");
+    public void testCorrectLogin(List<KeywordStep> steps) {
+        LOG.info("start 'testCorrectLogin'");
         for (KeywordStep step : steps) {
             LOG.info("page: {}, action: {}, obj: {}, value: {}",
                     step.getPage(), step.getAction(), step.getObject(), step.getValue());
 
             baseKW.doAction(step.getPage(), step.getAction(), step.getObject(), step.getValue());
         }
-        LOG.info("start 'testIncorrectLogin'");
+        LOG.info("start 'testCorrectLogin'");
     }
 
     @DataProvider(name="kdtProvider")

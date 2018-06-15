@@ -35,7 +35,7 @@ public class KeywordMyAccountIdentity {
     private void click(String object, String value) {
         switch (object) {
             case "signOutButton":
-                new MyAccountPage(driver).logout();
+                new MyAccountPage(driver).clickLogout();
                 break;
         }
     }
