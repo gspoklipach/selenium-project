@@ -1,8 +1,8 @@
 package com.academy.automation.practice.manager.helper;
 
-import com.academy.automation.practice.page.HomePage;
-import com.academy.automation.practice.page.LoginPage;
-import com.academy.automation.practice.page.MyAccountPage;
+import com.academy.automation.practice.manager.page.HomePage;
+import com.academy.automation.practice.manager.page.LoginPage;
+import com.academy.automation.practice.manager.page.MyAccountPage;
 import org.openqa.selenium.WebDriver;
 
 public class SessionHelper {

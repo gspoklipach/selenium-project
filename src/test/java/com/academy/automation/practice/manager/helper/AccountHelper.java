@@ -1,9 +1,7 @@
 package com.academy.automation.practice.manager.helper;
 
-import com.academy.automation.practice.page.MyAccountPage;
+import com.academy.automation.practice.manager.page.MyAccountPage;
 import org.openqa.selenium.WebDriver;
-
-import java.sql.Driver;
 
 public class AccountHelper {
 

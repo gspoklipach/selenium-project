@@ -1,4 +1,4 @@
-package com.academy.automation.practice.page;
+package com.academy.automation.practice.manager.page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

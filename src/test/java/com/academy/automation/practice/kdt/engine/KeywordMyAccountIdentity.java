@@ -1,6 +1,6 @@
 package com.academy.automation.practice.kdt.engine;
 
-import com.academy.automation.practice.page.MyAccountPage;
+import com.academy.automation.practice.manager.page.MyAccountPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
