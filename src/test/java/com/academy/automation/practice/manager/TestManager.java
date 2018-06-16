@@ -66,4 +66,8 @@ public class TestManager {
     public void stop() {
         driver.quit();
     }
+
+    public String root() {
+        return System.getProperty("basedir");
+    }
 }
