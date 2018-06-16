@@ -1,4 +1,4 @@
-package com.academy.automation.practice.manager.page;
+package com.academy.automation.practice.ddt.manager.page;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

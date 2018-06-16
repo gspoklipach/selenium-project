@@ -1,4 +1,4 @@
-package com.academy.automation.practice.manager.model;
+package com.academy.automation.practice.ddt.manager.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 

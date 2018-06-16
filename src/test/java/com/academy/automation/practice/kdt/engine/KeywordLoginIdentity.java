@@ -1,6 +1,6 @@
 package com.academy.automation.practice.kdt.engine;
 
-import com.academy.automation.practice.manager.page.LoginPage;
+import com.academy.automation.practice.ddt.manager.page.LoginPage;
 import org.openqa.selenium.WebDriver;
 
 public class KeywordLoginIdentity {

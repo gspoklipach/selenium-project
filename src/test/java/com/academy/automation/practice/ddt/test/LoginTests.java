@@ -1,6 +1,6 @@
-package com.academy.automation.practice.test;
+package com.academy.automation.practice.ddt.test;
 
-import com.academy.automation.practice.manager.model.LoginData;
+import com.academy.automation.practice.ddt.manager.model.LoginData;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.thoughtworks.xstream.XStream;

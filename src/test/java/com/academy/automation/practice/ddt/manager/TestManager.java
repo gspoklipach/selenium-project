@@ -1,8 +1,8 @@
-package com.academy.automation.practice.manager;
+package com.academy.automation.practice.ddt.manager;
 
-import com.academy.automation.practice.manager.helper.AccountHelper;
-import com.academy.automation.practice.manager.helper.NavigationHelper;
-import com.academy.automation.practice.manager.helper.SessionHelper;
+import com.academy.automation.practice.ddt.manager.helper.AccountHelper;
+import com.academy.automation.practice.ddt.manager.helper.NavigationHelper;
+import com.academy.automation.practice.ddt.manager.helper.SessionHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

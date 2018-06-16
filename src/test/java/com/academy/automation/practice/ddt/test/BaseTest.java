@@ -1,6 +1,6 @@
-package com.academy.automation.practice.test;
+package com.academy.automation.practice.ddt.test;
 
-import com.academy.automation.practice.manager.TestManager;
+import com.academy.automation.practice.ddt.manager.TestManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.*;

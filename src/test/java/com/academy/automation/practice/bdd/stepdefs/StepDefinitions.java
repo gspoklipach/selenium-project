@@ -1,9 +1,9 @@
 package com.academy.automation.practice.bdd.stepdefs;
 
-import com.academy.automation.practice.manager.TestManager;
-import com.academy.automation.practice.manager.page.HomePage;
-import com.academy.automation.practice.manager.page.LoginPage;
-import com.academy.automation.practice.manager.page.MyAccountPage;
+import com.academy.automation.practice.ddt.manager.TestManager;
+import com.academy.automation.practice.ddt.manager.page.HomePage;
+import com.academy.automation.practice.ddt.manager.page.LoginPage;
+import com.academy.automation.practice.ddt.manager.page.MyAccountPage;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;

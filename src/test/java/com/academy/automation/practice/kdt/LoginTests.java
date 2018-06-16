@@ -1,7 +1,7 @@
 package com.academy.automation.practice.kdt;
 
 import com.academy.automation.practice.kdt.engine.*;
-import com.academy.automation.practice.test.BaseTest;
+import com.academy.automation.practice.ddt.test.BaseTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

@@ -1,4 +1,4 @@
-package com.academy.automation.practice.manager.helper;
+package com.academy.automation.practice.ddt.manager.helper;
 
 import org.openqa.selenium.WebDriver;
 
