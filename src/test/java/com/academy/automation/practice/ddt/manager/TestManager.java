@@ -1,6 +1,7 @@
 package com.academy.automation.practice.ddt.manager;
 
 import com.academy.automation.practice.ddt.manager.helper.AccountHelper;
+import com.academy.automation.practice.ddt.manager.helper.AddressHelper;
 import com.academy.automation.practice.ddt.manager.helper.NavigationHelper;
 import com.academy.automation.practice.ddt.manager.helper.SessionHelper;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +22,7 @@ public class TestManager {
     private NavigationHelper navigationHelper;
     private SessionHelper sessionHelper;
     private AccountHelper accountHelper;
+    private AddressHelper addressHelper;
 
     public WebDriver getDriver() {
         return driver;
@@ -49,6 +51,7 @@ public class TestManager {
         navigationHelper = new NavigationHelper(driver, baseUrl);
         sessionHelper = new SessionHelper(driver, prop.getProperty("login"), prop.getProperty("password"));
         accountHelper = new AccountHelper(driver);
+        addressHelper = new AddressHelper(driver);
     }
 
     public NavigationHelper goTo() {
@@ -61,6 +64,10 @@ public class TestManager {
 
     public AccountHelper account() {
         return accountHelper;
+    }
+
+    public AddressHelper address() {
+        return addressHelper;
     }
 
     public void stop() {
